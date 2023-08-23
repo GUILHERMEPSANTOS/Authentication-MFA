@@ -14,7 +14,7 @@ namespace Identity.Api.Configurations
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
              );
 
-            services.AddDefaultIdentity<IdentityUser>(option => option.SignIn.RequireConfirmedEmail = true)
+            services.AddDefaultIdentity<IdentityUser>(option => option.SignIn.RequireConfirmedEmail = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();

@@ -8,6 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDependencyInjection();
 
 var app = builder.Build();
 
